@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Stopwatch</title>
+<h1 id="name"> Simple  Stopwatch </h1>
+ <style>
+    div{
+    position: fixed;
+    top: 25%;
+    left: 50%;
+	margin: -35px 0 0 -105px;
+    width: 210px;	height: 70px;
+    background: #FFA07A;
+    outline: 2px solid black;
+    border: 3px solid white;
+    border-radius: 12px;
+	font-family: "Castellar";
+	font-size:67;
+	text-align:center;
+	color:black;
+   }
+   #name{
+    position: fixed;
+	top: 1%;
+	left: 33%;
+    font-family: "Castellar";
+	font-size:40;
+	text-align:center;
+	color:#191970;
+   }
+  </style>
+</head>
+<body>
+<div id="stopwatch">00:00</div>
+</body>
+</html>
+<script>
+
+let m=0,s=0;
+let time;
+var timerId = setInterval(function() {
+s++; 
+if(s<10) {s="0"+s;}
+if(s==60) {m++; s="00";}
+m1="0"+m;
+if(m>=10) {m1=m;}
+time=m1+":"+s;
+  document.getElementById("stopwatch").innerHTML = time;
+}, 10);
+
+</script>
